@@ -14,12 +14,13 @@ class MyFirstApp extends StatelessWidget {
         backgroundColor: Colors.yellow,
         appBar: AppBar(
           title: Text('Welcome to Flutter'),
+          backgroundColor: Colors.orange,
         ),
         body: Center(
             child: Text(
           'My style ',
           style: TextStyle(
-              color: Colors.blue, fontSize: 48, fontWeight: FontWeight.bold),
+              color: Colors.red, fontSize: 48, fontWeight: FontWeight.bold),
         )),
       ),
     );
