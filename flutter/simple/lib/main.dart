@@ -1,13 +1,79 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyWidget());
+void main() => runApp(WidetImageText());
 
-class MyFirstAppStatefulWidget extends StatefulWidget {
+class WidetImageText extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-     
-     return null;
+  Widget build(BuildContext context) {
+  return  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: new Scaffold(
+        appBar: new AppBar(title: Text("Data"),
+        ),
+        body: new MyStatelessWidget('yandex',
+            "Яндекс — поисковая система и интернет-портал. Поиск по интернету и другие сервисы: на yandex.ru есть карты и навигатор, транспорт и такси, погода, ...Вы посещали эту страницу несколько раз. Дата последнего посещения: 04.06.20",
+            imageurl:
+                'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png'),),);
+  }
+}
+
+class MyStatelessWidget extends StatelessWidget {
+  final String _title;
+  final String _text;
+  String _imageurl;
+
+  MyStatelessWidget(this._title, this._text, {String imageurl}) {
+    _imageurl = imageurl;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_imageurl != null && _imageurl != '')
+      return new Container(
+          color: Colors.black12,
+          height: 100.0,
+          child: new Row(children: [
+            new Image.network(
+              _imageurl,
+              width: 100.0,
+              height: 100.0,
+              fit: BoxFit.cover,
+            ),
+            new Expanded(
+                child: new Container(
+                    padding: new EdgeInsets.all(5.0),
+                    child: new Column(children: [
+                      new Text(_title,
+                          style: new TextStyle(fontSize: 20.0),
+                          overflow: TextOverflow.ellipsis),
+                      new Expanded(
+                          child: new Text(
+                        _text,
+                        softWrap: true,
+                        textAlign: TextAlign.justify,
+                      ))
+                    ])))
+          ]));
+    return new Container(
+        color: Colors.black12,
+        height: 100.0,
+        child: new Row(children: [
+          new Expanded(
+              child: new Container(
+                  padding: new EdgeInsets.all(5.0),
+                  child: new Column(children: [
+                    new Text(_title,
+                        style: new TextStyle(fontSize: 20.0),
+                        overflow: TextOverflow.ellipsis),
+                    new Expanded(
+                        child: new Text(
+                      _text,
+                      softWrap: true,
+                      textAlign: TextAlign.justify,
+                    ))
+                  ])))
+        ]));
   }
 }
 
@@ -17,13 +83,17 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       // title: 'Welcome to Flutter',
       home: Scaffold(
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-          backgroundColor: Colors.orange,
-        ),
-        body: Center(child: Text("JAVA",style: TextStyle(fontSize: 32),),) 
-      ),
+          backgroundColor: Colors.yellow,
+          appBar: AppBar(
+            title: Text('Welcome to Flutter'),
+            backgroundColor: Colors.orange,
+          ),
+          body: Center(
+            child: Text(
+              "JAVA",
+              style: TextStyle(fontSize: 32),
+            ),
+          )),
     );
   }
 }
