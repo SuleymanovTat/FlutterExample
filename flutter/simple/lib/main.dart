@@ -1,5 +1,6 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:simple/statefulwidget.dart';
 
 void main() => runApp(WidetImageText());
 
@@ -52,7 +53,8 @@ class MyStatelessWidget extends StatelessWidget {
                         _text,
                         softWrap: true,
                         textAlign: TextAlign.justify,
-                      ))
+                      )),
+                      new NewWidget()
                     ])))
           ]));
     return new Container(
