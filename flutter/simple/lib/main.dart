@@ -1,7 +1,32 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyFirstAppStatelessWidget());
+void main() => runApp(MyWidget());
+
+class MyFirstAppStatefulWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+     
+     return null;
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      // title: 'Welcome to Flutter',
+      home: Scaffold(
+        backgroundColor: Colors.yellow,
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+          backgroundColor: Colors.orange,
+        ),
+        body: Center(child: Text("JAVA",style: TextStyle(fontSize: 32),),) 
+      ),
+    );
+  }
+}
 
 class MyFirstAppStatelessWidget extends StatelessWidget {
   @override
@@ -32,7 +57,10 @@ class MyFirstAppStatelessWidget extends StatelessWidget {
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: null, child: Icon(Icons.local_drink),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        child: Icon(Icons.local_drink),
+      ),
     ));
   }
 }
