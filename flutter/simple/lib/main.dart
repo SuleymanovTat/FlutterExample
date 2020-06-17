@@ -1,21 +1,27 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
+import 'package:simple/newFavorite.dart';
 import 'package:simple/statefulwidget.dart';
+
+//shirft+alt+F
 
 void main() => runApp(WidetImageText());
 
 class WidetImageText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  return  MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: new Scaffold(
-        appBar: new AppBar(title: Text("Data"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: Text("Data"),
         ),
         body: new MyStatelessWidget('yandex',
             "Яндекс — поисковая система и интернет-портал. Поиск по интернету и другие сервисы: на yandex.ru есть карты и навигатор, транспорт и такси, погода, ...Вы посещали эту страницу несколько раз. Дата последнего посещения: 04.06.20",
             imageurl:
-                'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png'),),);
+                'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png'),
+      ),
+    );
   }
 }
 
@@ -54,7 +60,8 @@ class MyStatelessWidget extends StatelessWidget {
                         softWrap: true,
                         textAlign: TextAlign.justify,
                       )),
-                      new NewWidget()
+                      NewFavorite(10, true)
+                      // new NewWidget(),
                     ])))
           ]));
     return new Container(
@@ -73,7 +80,7 @@ class MyStatelessWidget extends StatelessWidget {
                       _text,
                       softWrap: true,
                       textAlign: TextAlign.justify,
-                    ))
+                    )),
                   ])))
         ]));
   }

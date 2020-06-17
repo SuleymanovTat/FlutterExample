@@ -8,6 +8,6 @@ class NewWidget extends StatefulWidget {
 class NewWidgetState extends State<NewWidget> {
   @override
   Widget build(BuildContext context) {
-    return new Text('my text');
+    return new Text('My text2');
   }
 }
