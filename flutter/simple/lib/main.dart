@@ -1,8 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:simple/newFavorite.dart';
-
-import 'endlessList.dart';
+import 'endless_list.dart';
+import 'new_favorite.dart';
 
 //shirft+alt+F
 
