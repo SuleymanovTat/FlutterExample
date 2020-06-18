@@ -1,11 +1,12 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'endless_list.dart';
+import 'list_stateful_widget.dart';
 import 'new_favorite.dart';
 
 //shirft+alt+F
 
-void main() => runApp(EndlessList());
+void main() => runApp(ListStatelessWidget());
 
 class WidetImageText extends StatelessWidget {
   @override
