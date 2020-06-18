@@ -2,10 +2,11 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:simple/newFavorite.dart';
 import 'package:simple/statefulwidget.dart';
+import 'package:simple/staticList.dart';
 
 //shirft+alt+F
 
-void main() => runApp(WidetImageText());
+void main() => runApp(StaticList());
 
 class WidetImageText extends StatelessWidget {
   @override
